@@ -63,7 +63,7 @@ const Header = () => {
                             <span>{products.length}</span>
                         </span>
                         <div className="buttons">
-                            <button onClick={handleLogout} className="button">Logout</button>
+                            <button onClick={handleLogout} className="button">Login</button>
                         </div>
                     </div>
                 </div>
