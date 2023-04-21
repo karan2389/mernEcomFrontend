@@ -1,0 +1,127 @@
+@import "../../css-config/mixins.scss";
+
+.main-header {
+  width: 100%;
+  padding: 0 20px;
+  background-color: rgb(41, 34, 15);
+  color: rgb(219, 187, 98);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 99;
+
+  @include md {
+    padding: 0 40px;
+  }
+
+  .main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include md {
+      height: 80px;
+    }
+    .left {
+      list-style-type: none;
+      display: none;
+      gap: 25px;
+      align-items: center;
+      @include md {
+        display: flex;
+      }
+      a {
+        text-decoration: none;
+        color: rgb(133, 112, 54);
+      }
+
+      li {
+        font-size: 18px;
+        margin-top: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+      li:hover {
+        color: rgb(183, 183, 183);
+        border: 2px solid rgb(176, 176, 176);
+        border-radius: 10px;
+        transition: all 150ms;
+        padding: 5px;
+      }
+    }
+
+    .center {
+      font-size: 30px;
+      font-weight: 700;
+      text-decoration: none;
+      color: rgb(154, 131, 67);
+      cursor: pointer;
+      @include md {
+        font-size: 40px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      @include md {
+        gap: 30px;
+      }
+
+      svg {
+        font-size: 25px;
+        cursor: pointer;
+        @include md {
+          font-size: 30px;
+        }
+      }
+      .cart-icon {
+        position: relative;
+
+        span {
+          min-width: 20px;
+          text-align: center;
+          background-color: purple;
+          padding: 2.5px;
+          position: absolute;
+          top: -5px;
+          right: -12px;
+          font-size: 12px;
+          line-height: 1;
+          border-radius: 10px;
+        }
+      }
+      .button {
+        padding: 5px;
+        background-color: rgb(124, 107, 59);
+        border-radius: 20px;
+        border: 2px solid rgb(219, 187, 98);
+      }
+      .button:hover {
+        background-color: black;
+        border-color: olive;
+        color: olive;
+      }
+    }
+  }
+  &.sticky-header {
+    position: sticky;
+    top: 0;
+    transform: translateY(-50%);
+    animation: stickyHeader 0.9s ease forwards;
+  }
+}
+
+@keyframes stickyHeader {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}

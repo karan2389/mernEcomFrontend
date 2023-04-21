@@ -1,0 +1,23 @@
+.successContainer {
+    margin: 0 auto;
+    height: 100vh;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    background-color: olive;
+    .text {
+       // margin-top: 100px;
+        margin-left: 200px;
+        font-family: cursive;
+        h1 {
+            
+            margin-bottom: 20px;
+            font-size:50px;
+            border: 3px solid black;
+            text-align: center;
+            margin-right: 100px;
+            background-color: rgb(72, 72, 12);
+        }
+    }
+
+}

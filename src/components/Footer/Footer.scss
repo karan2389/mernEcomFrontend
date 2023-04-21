@@ -1,0 +1,30 @@
+@import "../../css-config/mixins.scss";
+
+.footer {
+    width: 100%;
+    background-color: black;
+   .bottom-bar {
+    border-top: 1px solid black;
+    .bottom-bar-content {
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        color: wheat;
+        @include md {
+            padding:0;
+            height: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .text {
+            font-size: 12px;
+            color: wheat;
+        }
+    }
+   }
+}
